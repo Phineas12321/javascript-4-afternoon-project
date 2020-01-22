@@ -148,6 +148,10 @@ function Employee(name, email, hireDate) {
   
   // Code here
   User.prototype.changePostRating = function(id, newRating){
-    this.id
-    this.rating = newRating
+    this.savedPosts = this.savedPosts.map(function(e){
+      if(id === e.id){
+        e.rating = newRating
+      }
+      return e
+    })
   }
